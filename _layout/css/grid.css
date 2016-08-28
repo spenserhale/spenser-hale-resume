@@ -1,0 +1,221 @@
+/**
+ * Name: grid.css
+ * Version: 1.0.0
+ *	
+ *	-
+ *
+ *	T.O.C
+ *	
+ *	#Base Grid
+ *  #Large Display
+ *	#Tablet (Portrait)
+ *  #Mobile (Portrait and landscape)
+ *  #Align
+ *	#Responsive Images and embeds
+ *	#Clearing
+ *  #ResponsiveFormInputs
+ */
+
+.visible-phone {
+    display: none !important;
+}
+
+.visible-tablet {
+    display: none !important;
+}
+
+.hidden-desktop {
+    display: none !important;
+}
+
+.visible-desktop {
+    display: inherit !important;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+    .hidden-desktop {
+        display: inherit !important;
+    }
+
+    .visible-desktop {
+        display: none !important;
+    }
+
+    .visible-tablet {
+        display: inherit !important;
+    }
+
+    .hidden-tablet {
+        display: none !important;
+    }
+
+}
+
+/* ==========================================================================
+   #Mobile (Portrait and Landscape )
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    .hidden-desktop {
+        display: inherit !important;
+    }
+
+    .visible-desktop {
+        display: none !important;
+    }
+
+    .visible-phone {
+        display: inherit !important;
+    }
+
+    .hidden-phone {
+        display: none !important;
+    }
+
+}
+
+/* ==========================================================================
+   #Align
+   ========================================================================== */
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+/* ==========================================================================
+   #Responsive Images and Embeds
+   ========================================================================== */
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/**
+ 	 * 1. 16/9 ratio
+ 	 */
+
+.responsive-embed {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding: 0;
+    padding-bottom: 56.25%; /* 1 */
+    margin-bottom: 20px;
+}
+
+.responsive-embed iframe,
+.responsive-embed object,
+.responsive-embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================================
+   #Clearing
+   ========================================================================== */
+
+/**
+ 	 * Automatically Clear Fix rows
+ 	 */
+/*
+	.row:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+	*/
+
+/**
+ 	 * Clear Fix hack
+	 * Usage:  add  class="fixed"  to div's that have floated elements in them
+ 	 */
+
+.fixed:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+/**
+ 	 * Clear content
+	 * Usage:  <br class="clear"> 
+ 	 */
+
+	.clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+	}
+
+@media print {
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+        float: left
+    }
+
+    .col-sm-12 {
+        width: 100%
+    }
+
+    .col-sm-11 {
+        width: 91.66666667%
+    }
+
+    .col-sm-10 {
+        width: 83.33333333%
+    }
+
+    .col-sm-9 {
+        width: 75%
+    }
+
+    .col-sm-8 {
+        width: 66.66666667%
+    }
+
+    .col-sm-7 {
+        width: 58.33333333%
+    }
+
+    .col-sm-6 {
+        width: 50%
+    }
+
+    .col-sm-5 {
+        width: 41.66666667%
+    }
+
+    .col-sm-4 {
+        width: 33.33333333%
+    }
+
+    .col-sm-3 {
+        width: 25%
+    }
+
+    .col-sm-2 {
+        width: 16.66666667%
+    }
+
+    .col-sm-1 {
+        width: 8.33333333%
+    }
+}
