@@ -52,10 +52,10 @@
 
     function badges() {
         // Replace the value for var 'e' with your Treehouse Username
-        var e = "spenserhale",
+        var e = "spenserhale",y
 
         // Treehouse Json
-            t = "http://resume.spenserhale.com/" + e + ".json",
+            t = "https://resume.spenserhale.com/" + e + ".json",
 
         // Badges JQuery Identifier
             n = $("#badges"),
